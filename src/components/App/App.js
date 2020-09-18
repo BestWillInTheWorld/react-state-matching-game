@@ -28,7 +28,6 @@ class App extends Component{
   }
 
   handleTileClicked(id, color) {
-    console.debug(color);
     this.setState( (state) =>
     {
       const tiles = state.tiles;
@@ -39,9 +38,6 @@ class App extends Component{
       toBeCleared?.forEach(x => tiles[x].selected = false);
       toBeCleared = null;
 
-      console.debug(state);
-      console.debug(state.color);
-      console.debug(selectedTileIndex);
       if(selectedTileIndex) tiles[selectedTileIndex].selected = true;
       
       if (previousTileIndex !== null) {
