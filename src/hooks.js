@@ -11,7 +11,7 @@ export default function useHover() {
 
     useEffect(() => {
         const refCopy = ref;
-        ref.current.addEventListener('mouseenter', enter)
+        refCopy.current.addEventListener('mouseenter', enter)
         refCopy.current.addEventListener('mouseleave', () => {})
         return () => {}
      })
