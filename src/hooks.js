@@ -8,12 +8,16 @@ export default function useHover() {
     function enter() {
         setHovered(true);
     }
+    
+    function leave() {
+        setHovered(false);
+    }
 
     useEffect(() => {
         const refCopy = ref;
-        refCopy.current.addEventListener('mouseenter', enter)
-        refCopy.current.addEventListener('mouseleave', () => {})
-        return () => {}
+        refCopy.current?.addEventListener('mouseenter', enter)
+        refCopy.current?.addEventListener('mouseleave', leave)
+        return () => { }
      })
 
     return [ ref, hovered ];
