@@ -12,8 +12,8 @@ const Board = (props) => {
   return (
     <div className='Board' style={gridConfig}>      
     {
-      props.tiles.map((tile, index) => 
-          <Tile props={{...tile}} key={index} />
+      props.tiles.map(tile => 
+          <Tile {...tile} />
       )
     }
     </div>
