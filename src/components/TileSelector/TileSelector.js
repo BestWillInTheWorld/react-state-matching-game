@@ -4,7 +4,7 @@ import useHover from '../../hooks';
 
 const TileSelector = (props) => {
 
-  const { ref, hovered } = useHover();
+  const [ ref, hovered ] = useHover();
   
   const numbers = [4, 16, 36];
   const dropdown = (
