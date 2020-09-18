@@ -16,11 +16,13 @@ const TileSelector = (props) => {
   );
 
   return (
-    <div className='tileSelector'>
-      <div>Number of Tiles</div>
-      <div className='tileSelectorDropdown' ref={ref}>
-        {props.numTiles}
-        {hovered ? dropdown : null}
+    <div>
+      <div className='tileSelector'>
+      <div className='no-wrap'>Number of Tiles</div>
+        <div className='tileSelectorDropdown' ref={ref}>
+          {props.numTiles}
+          {hovered ? dropdown : null}
+        </div>
       </div>
     </div>
   )
